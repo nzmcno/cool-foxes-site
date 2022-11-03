@@ -16,6 +16,17 @@ const NavBar = styled.nav`
   width: 85%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
+  .mobile {
+    display: none;
+  }
+  @media (max-width: 64em) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: inline-block;
+    }
+  }
 `;
 const Menu = styled.ul`
   display: flex;
@@ -38,7 +49,7 @@ const Menu = styled.ul`
 
     transform: ${(props) =>
       props.click ? "translateY(0)" : `translateY(100%)`};
-    transition: ALL 0.3s ease;
+    transition: all 0.3s ease;
 
     flex-direction: column;
     justify-content: center;
@@ -61,7 +72,15 @@ const MenuItem = styled.li`
   &:hover::after {
     width: 100%;
   }
-  display: none; //
+  // display: none; //
+
+  @media (max-width: 64em) {
+    /**1024px */
+    margin: 1rem 0;
+    &::after {
+      display: none;
+    }
+  }
 `;
 
 const HamburgerMenu = styled.span`
@@ -120,7 +139,9 @@ const Navigation = () => {
       block: "start",
       inline: "nearest",
     });
+    setClick(!click);
   };
+
   return (
     <Section id="navigation">
       <NavBar>
@@ -135,9 +156,15 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+          <MenuItem>
+            <div class="mobile">
+              <Button text="Connect Wallet" link="https://google.com" />
+            </div>
+          </MenuItem>
         </Menu>
-
-        <Button text="Connect Wallet" link="https://google.com" />
+        <div class="desktop">
+          <Button text="Connect Wallet" link="https://google.com" />
+        </div>
       </NavBar>
     </Section>
   );
