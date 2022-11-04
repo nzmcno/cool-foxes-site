@@ -53,6 +53,8 @@ const Menu = styled.ul`
 
     flex-direction: column;
     justify-content: center;
+
+    touch-action: none;
   }
 `;
 
