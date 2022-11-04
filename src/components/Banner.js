@@ -23,6 +23,11 @@ const Section = styled.section`
   align-items: center;
 
   overflow: hidden;
+
+  @media (max-width: 48em) {
+    height: 15rem;
+    flex-direction: column;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -40,6 +45,13 @@ const ImageContainer = styled.div`
     width: 15rem;
     height: auto;
   }
+
+  @media (max-width: 48em) {
+    img {
+      width: 10rem;
+      height: auto;
+    }
+  }
 `;
 
 const Title = styled.h1`
@@ -51,12 +63,28 @@ const Title = styled.h1`
   text-transform: capitalize;
 
   text-shadow: 1px 1px 2px ${(props) => props.theme.text};
+
+  @media (max-width: 64em) {
+    font-size: ${(props) => props.theme.fontxxl};
+    text-align: center;
+    width: 40%;
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxl};
+    width: 100%;
+    padding: 2rem 0;
+  }
 `;
 
 const BtnContainer = styled.div`
   width: 35%;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 48em) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const JoiNow = styled.button`
@@ -72,6 +100,14 @@ const JoiNow = styled.button`
   cursor: pointer;
   transition: all 0.2 ease;
   position: relative;
+
+  @media (max-width: 48em) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 30em) {
+    padding: 0.5rem 2rem;
+    font-size: ${(props) => props.theme.fontsm};
+  }
 
   &:hover {
     transform: scale(0.9);
