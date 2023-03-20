@@ -111,14 +111,21 @@ const Position = styled.h2`
 `;
 
 const projectName = "Puffsterz";
-const MemberComponent = ({ img, name = "", position = " " }) => {
+const MemberComponent = ({
+  img,
+  name = "",
+  position = " ",
+  twitterlink = "",
+}) => {
   return (
     <Item>
-      <ImageContainer>
-        <img src={img} alt={name} />
-      </ImageContainer>
-      <Name>{name}</Name>
-      <Position>{position}</Position>
+      <a href={twitterlink} target="_blank" rel="noopener noreferrer">
+        <ImageContainer>
+          <img src={img} alt={name} />
+        </ImageContainer>
+        <Name>{name}</Name>
+        <Position>{position}</Position>
+      </a>
     </Item>
   );
 };
@@ -129,23 +136,60 @@ const Team = () => {
       <ConfettiComponent />
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img1} name="SIN" position="Co-Founder" />
-        <MemberComponent img={img2} name="Yeezus" position="Co-Founder" />
-        <MemberComponent img={img3} name="NeatLoud" position="C. Manager" />
-        <MemberComponent img={img4} name="Lj" position="CM" />
-        <MemberComponent img={img5} name="Nifty" position="Artist" />
+        <MemberComponent
+          img={img1}
+          name="SIN"
+          position="Co-Founder"
+          twitterlink="https://twitter.com/SiNftGod"
+        />
+        <MemberComponent
+          img={img2}
+          name="Yeezus"
+          position="Co-Founder"
+          twitterlink="https://twitter.com/Y33zus27"
+        />
+        <MemberComponent
+          img={img3}
+          name="NeatLoud"
+          position="C. Manager"
+          twitterlink="https://twitter.com/NeatLoud"
+        />
+        <MemberComponent
+          img={img4}
+          name="Lj"
+          position="CM"
+          twitterlink="https://twitter.com/LjOvE55"
+        />
+        <MemberComponent
+          img={img5}
+          name="Nifty"
+          position="Artist"
+          twitterlink="https://twitter.com/NiftyNickNFT"
+        />
         <MemberComponent
           img={img6}
           name="Dunkin Uncle Ben"
           position="Lead Mod"
+          twitterlink="https://twitter.com/DunkinBenksy"
         />
-        <MemberComponent img={img7} name="Dr.Duc" position="Raid Leader" />
+        <MemberComponent
+          img={img7}
+          name="Dr.Duc"
+          position="Raid Leader"
+          twitterlink="https://twitter.com/Dr_Duc014"
+        />
         <MemberComponent
           img={img8}
           name="Danielius"
           position="Marketing Advisor"
+          twitterlink=""
         />
-        <MemberComponent img={img9} name="DegenTSF" position="CTO" />
+        <MemberComponent
+          img={img9}
+          name="DegenTSF"
+          position="CTO"
+          twitterlink="https://twitter.com/DeGenTSF"
+        />
       </Container>
     </Section>
   );

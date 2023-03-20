@@ -173,7 +173,7 @@ const Footer = () => {
         <span>
           Thanks &#10084;{" "}
           <a
-            href="http://twitter.com/ncnDev"
+            href="http://twitter.com/mbeNFT"
             target="_blank"
             rel="noopener noreferrer"
           >
