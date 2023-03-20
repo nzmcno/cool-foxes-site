@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Section = styled.section`
-  min-height: 100vh;
+  min-height: 250vh;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
@@ -29,7 +29,7 @@ const Title = styled.h1`
 
 const Container = styled.div`
   width: 70%;
-  height: 200vh;
+  height: 250vh;
   background-color: ${(props) => props.theme.body};
   margin: 0 auto;
   display: flex;
@@ -244,6 +244,7 @@ const Roadmap = () => {
               { id: "9", name: "Close deal for our IRL Smoke Shop. Date TBA" },
             ]}
           />
+
           <RoadmapItem
             title="Holder payouts and Giveaways"
             addToRef={addToRefs}
