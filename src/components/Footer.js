@@ -169,6 +169,17 @@ const Footer = () => {
         <span>
           &copy;{new Date().getFullYear()} Puffsterz Corp. All rights reserved.
         </span>
+
+        <span>
+          Thanks &#10084;{" "}
+          <a
+            href="http://twitter.com/ncnDev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @mbeNFT
+          </a>
+        </span>
         <span>
           Made with &#10084; by{" "}
           <a
