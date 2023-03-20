@@ -1,47 +1,43 @@
+//This file has different themes
 
+export const light = {
+  body: "#fff",
+  text: "#202020", //black shade
+  bodyRgba: "255, 255, 255",
+  textRgba: "32, 32, 32",
 
-//This file has different themes 
+  carouselColor: "#EEEDDE", //EEEDDE
 
-export const light ={
-    body:"#fff",
-    text:"#202020", //black shade
-    bodyRgba : "255, 255, 255",
-    textRgba: "32, 32, 32",
+  fontxs: "0.75em",
+  fontsm: "0.875em",
+  fontmd: "1em",
+  fontlg: "1.25em",
+  fontxl: "2em",
+  fontxxl: "3em",
+  fontxxxl: "4em",
 
-    carouselColor: "#EEEDDE",
+  fontButton: "0.875em",
 
-    fontxs:'0.75em',
-    fontsm:'0.875em',
-    fontmd:'1em',
-    fontlg:'1.25em',
-    fontxl:'2em',
-    fontxxl:'3em',
-    fontxxxl:'4em',
+  navHeight: "5rem",
+};
 
-    fontButton:'0.875em',
+export const dark = {
+  body: "#202020",
+  text: "#fff", //black shade
+  bodyRgba: "32, 32, 32",
+  textRgba: "255, 255, 255",
 
-    navHeight:'5rem',
+  carouselColor: "#EEEDDE",
 
-}
+  fontxs: "0.75em",
+  fontsm: "0.875em",
+  fontmd: "1em",
+  fontlg: "1.25em",
+  fontxl: "2em",
+  fontxxl: "3em",
+  fontxxxl: "4em",
 
-export const dark ={
-    body:"#202020",
-    text:"#fff", //black shade
-    bodyRgba : "32, 32, 32",
-    textRgba: "255, 255, 255",
+  fontButton: "0.875em",
 
-    carouselColor: "#EEEDDE",
-
-    fontxs:'0.75em',
-    fontsm:'0.875em',
-    fontmd:'1em',
-    fontlg:'1.25em',
-    fontxl:'2em',
-    fontxxl:'3em',
-    fontxxxl:'4em',
-
-    fontButton:'0.875em',
-
-    navHeight:'5rem',
-
-}
+  navHeight: "5rem",
+};

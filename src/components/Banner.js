@@ -145,7 +145,7 @@ const Banner = () => {
         <img src={img6} alt={projectName} />
       </ImageContainer>
       <Title>
-        Join the <br /> foxes club
+        Join the <br /> Puffsterz Corp
       </Title>
       <BtnContainer>
         <JoiNow>Join Now</JoiNow>

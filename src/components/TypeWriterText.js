@@ -69,7 +69,7 @@ const TypeWriterText = () => {
   return (
     <>
       <Title>
-        Discover a new era of cool
+        Here to build A new future for
         <Typewriter
           options={{
             autoStart: true,
@@ -83,16 +83,19 @@ const TypeWriterText = () => {
               .typeString('<span class="text-2">Collectible Items.</span>')
               .pauseFor(2000)
               .deleteAll()
-              .typeString('<span class="text-3">Cool Foxes!</span>')
+              .typeString('<span class="text-3">Puffsterz!</span>')
               .pauseFor(2000)
               .deleteAll()
               .start();
           }}
         />
       </Title>
-      <SubTitle>Bored Of Apes? Try Something New.</SubTitle>
+      <SubTitle>Try Something New.</SubTitle>
       <ButtonContainer>
-        <Button text="Explore" link="#about" />
+        <Button
+          text="WHITEPAPER"
+          link="https://my.visme.co/view/n0g0ejzz-g8nlq78d1rdq2m9d"
+        />
       </ButtonContainer>
     </>
   );

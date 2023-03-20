@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import img1 from "../../assets/Nfts/bighead-1.png";
-import img2 from "../../assets/Nfts/bighead-2.png";
-import img3 from "../../assets/Nfts/bighead-3.png";
-import img4 from "../../assets/Nfts/bighead-4.png";
-import img5 from "../../assets/Nfts/bighead-5.png";
-import img6 from "../../assets/Nfts/bighead-6.png";
-import img7 from "../../assets/Nfts/bighead-7.png";
+import img1 from "../../assets/Nfts/team/member-1.png";
+import img2 from "../../assets/Nfts/team/member-2.png";
+import img3 from "../../assets/Nfts/team/member-3.jpeg";
+import img4 from "../../assets/Nfts/team/member-4.jpeg";
+import img5 from "../../assets/Nfts/team/member-5.png";
+import img6 from "../../assets/Nfts/team/member-6.png";
+import img7 from "../../assets/Nfts/team/member-7.jpeg";
+import img8 from "../../assets/Nfts/team/member-8.png";
+import img9 from "../../assets/Nfts/team/member-9.jpeg";
 import ConfettiComponent from "../Confetti";
 
 const Section = styled.section`
@@ -108,7 +110,7 @@ const Position = styled.h2`
   font-weight: 400;
 `;
 
-const projectName = "Foxes";
+const projectName = "Puffsterz";
 const MemberComponent = ({ img, name = "", position = " " }) => {
   return (
     <Item>
@@ -127,27 +129,23 @@ const Team = () => {
       <ConfettiComponent />
       <Title>Team</Title>
       <Container>
-        <MemberComponent img={img1} name={projectName} position="Founder" />
-        <MemberComponent img={img2} name={projectName} position="Co-Founder" />
-        <MemberComponent img={img3} name={projectName} position="Director" />
-        <MemberComponent img={img3} name={projectName} position="Manager" />
-        <MemberComponent img={img4} name={projectName} position="Artist" />
-        <MemberComponent
-          img={img3}
-          name={projectName}
-          position="Social Media Manager"
-        />
-        <MemberComponent
-          img={img5}
-          name={projectName}
-          position="Web3 Developer"
-        />
+        <MemberComponent img={img1} name="SIN" position="Co-Founder" />
+        <MemberComponent img={img2} name="Yeezus" position="Co-Founder" />
+        <MemberComponent img={img3} name="NeatLoud" position="C. Manager" />
+        <MemberComponent img={img4} name="Lj" position="CM" />
+        <MemberComponent img={img5} name="Nifty" position="Artist" />
         <MemberComponent
           img={img6}
-          name={projectName}
-          position="Marketing Manager"
+          name="Dunkin Uncle Ben"
+          position="Lead Mod"
         />
-        <MemberComponent img={img7} name={projectName} position="UX-Designer" />
+        <MemberComponent img={img7} name="Dr.Duc" position="Raid Leader" />
+        <MemberComponent
+          img={img8}
+          name="Danielius"
+          position="Marketing Advisor"
+        />
+        <MemberComponent img={img9} name="DegenTSF" position="CTO" />
       </Container>
     </Section>
   );

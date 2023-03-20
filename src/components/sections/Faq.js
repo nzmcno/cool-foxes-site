@@ -105,11 +105,11 @@ const Faq = () => {
             childen="You will be able to use your NFT as an avatar in the Metaverse and our future video game. Holding also means that you are part of an exclusive network of investors and entrepreneurs."
           />
           <Accordion
-            title="WHAT ARE THE FOXES?"
+            title="WHAT ARE THE PUFFSTERZ?"
             childen="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim veritatis iusto officia. Exercitationem, ducimus reiciendis. Rem, maxime, similique neque minus aliquam dolore doloremque laboriosam, facilis quibusdam unde sint officia."
           />
           <Accordion
-            title="WHAT IS THE FUSION PROCESS?"
+            title="WHAT IS THE PROCESS?"
             childen="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim veritatis iusto officia. Exercitationem, ducimus reiciendis. Rem, maxime, similique neque minus aliquam dolore doloremque laboriosam, facilis quibusdam unde sint officia."
           />
         </Box>

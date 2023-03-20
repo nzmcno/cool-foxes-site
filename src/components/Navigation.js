@@ -130,6 +130,11 @@ const HamburgerMenu = styled.span`
   }
 `;
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+  if (newWindow) newWindow.opener = null;
+};
+
 const Navigation = () => {
   const [click, setClick] = useState(false);
 
@@ -155,17 +160,22 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
-          <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
+          <MenuItem
+            onClick={() => openInNewTab("https://puffsterzpad.io/calendar")}
+          >
+            PuffsterzPad
+          </MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
+
           <MenuItem>
             <div className="mobile">
-              <Button text="Connect Wallet" link="https://google.com" />
+              <Button text="Join Now" link="https://discord.gg/bkBngp8FKu" />
             </div>
           </MenuItem>
         </Menu>
         <div className="desktop">
-          <Button text="Connect Wallet" link="https://google.com" />
+          <Button text="Join Now" link="https://discord.gg/bkBngp8FKu" />
         </div>
       </NavBar>
     </Section>

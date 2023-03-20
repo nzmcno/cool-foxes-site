@@ -142,22 +142,27 @@ const About = () => {
         </Box>
         <Box>
           <Title>
-            Welcome To The <br /> Cool Foxes.
+            Welcome To The <br /> Puffsterz Corp.
           </Title>
           <SubText>
-            The Cool Foxes Club is a private collection of NFTs—unique digital
-            collectibles. The Cool Foxes are stored as ERC-721 tokens on the
-            Ethereum blockchain and hosted on IPFS.
+            U.S based project. Our mission is to merge the street style with
+            sophisticated, intellectual minds. Building a strong community to
+            join us on our ventures, together conquering the Solana Space
+            through innovation. Follow us on our beautiful journey to cloud 9
+            Where the sky is the limit.
           </SubText>
           <SubTextLight>
-            With more than 200+ hand drawn traits, each NFT is unique and comes
-            with a membership to an exclusive group of successful investors.
-            Join an ambitious ever-growing community with multiple benefits and
-            utilities.
+            Puffsterz corp is a street brand retail chain seeking to build a
+            stable ecosystem to give back to holders via our TOE (Task Oriented
+            Earning) protocol, growing our network both on the ground and in the
+            world of web3 🤝 🌎
           </SubTextLight>
           <ButtonContainer>
             <ThemeProvider theme={dark}>
-              <Button text="JOIN OUR DISCORD" link="#" />
+              <Button
+                text="JOIN OUR DISCORD"
+                link="https://discord.gg/bkBngp8FKu"
+              />
             </ThemeProvider>
           </ButtonContainer>
         </Box>

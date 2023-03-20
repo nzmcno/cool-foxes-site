@@ -2,9 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Banner from "./Banner";
 import Logo from "./Logo";
-import Facebook from "../Icons/Facebook";
+import Discord from "../Icons/Discord";
 import Instagram from "../Icons/Instagram";
 import Twitter from "../Icons/Twitter";
+
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+  if (newWindow) newWindow.opener = null;
+};
 
 const Section = styled.section`
   min-height: 100vh;
@@ -124,21 +129,21 @@ const Footer = () => {
           <Logo />
           <IconList>
             <a
-              href="http://facebook.com/"
+              href="https://discord.gg/bkBngp8FKu"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Facebook />
+              <Discord />
             </a>
             <a
-              href="http://facebook.com/"
+              href="https://twitter.com/puffsterznfts"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Twitter />
             </a>
             <a
-              href="http://facebook.com/"
+              href="https://www.instagram.com/puffsterznfts/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -151,19 +156,23 @@ const Footer = () => {
           <Item onClick={() => scrollTo("about")}>About</Item>
           <Item onClick={() => scrollTo("roadmap")}>Roadmap</Item>
 
-          <Item onClick={() => scrollTo("showcase")}>Showcase</Item>
+          <Item
+            onClick={() => openInNewTab("https://puffsterzpad.io/calendar")}
+          >
+            PuffsterzPad
+          </Item>
           <Item onClick={() => scrollTo("team")}>Team</Item>
           <Item onClick={() => scrollTo("faq")}>Faq</Item>
         </MenuItems>
       </Container>
       <Bottom>
         <span>
-          &copy;{new Date().getFullYear()} Cool Foxes. All rights reserved.
+          &copy;{new Date().getFullYear()} Puffsterz Corp. All rights reserved.
         </span>
         <span>
           Made with &#10084; by{" "}
           <a
-            href="http://twitter.com/"
+            href="http://twitter.com/ncnDev"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -154,13 +154,22 @@ const Text = styled.span`
   }
 `;
 
-const RoadmapItem = ({ title, subtext, addToRef }) => {
+function SubTextCom({ items }) {
+  return items.map((item) => (
+    <Text>
+      <b>{item.id}.</b> {item.name}
+      {"\n"}
+    </Text>
+  ));
+}
+
+const RoadmapItem = ({ title, items, addToRef }) => {
   return (
     <Item ref={addToRef}>
       <ItemContainer>
         <Box>
           <SubTitle>{title}</SubTitle>
-          <Text>{subtext}</Text>
+          <SubTextCom items={items} />
         </Box>
       </ItemContainer>
     </Item>
@@ -212,29 +221,107 @@ const Roadmap = () => {
         <Items>
           <Item>&nbsp;</Item>
           <RoadmapItem
-            title="Grand Opening"
+            title="Building"
             addToRef={addToRefs}
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            items={[
+              { id: "1", name: "Launch of Discord, twitter & website" },
+              { id: "2", name: "Delivery of artwork" },
+              {
+                id: "3",
+                name: "Recruitment and strengthening of our core team",
+              },
+              { id: "4", name: "Community Building / Marketing Campaign" },
+              { id: "5", name: "Sneak Peaks" },
+              {
+                id: "6",
+                name: "Announcement of official mint price & collection size",
+              },
+              { id: "7", name: "Smooth mint of our NFT collection." },
+              {
+                id: "8",
+                name: "Addition of our first utility for community members to utilize",
+              },
+              { id: "9", name: "Close deal for our IRL Smoke Shop. Date TBA" },
+            ]}
           />
           <RoadmapItem
-            title="Great Benefits"
+            title="Holder payouts and Giveaways"
             addToRef={addToRefs}
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            items={[
+              {
+                id: "1",
+                name: "Live streamed grand opening of the Smoke Shop",
+              },
+              {
+                id: "2",
+                name: "Investing a percentage of mint funds back into Puffsterz",
+              },
+              {
+                id: "3",
+                name: "Collaborations with like minded projects to expand our network",
+              },
+              { id: "4", name: "Marketing & strengthening the brand" },
+              {
+                id: "5",
+                name: "Implementation of our TOE ( Task Oriented Earning ) protocol to reward holders from IRL Smoke Shop.",
+              },
+              {
+                id: "6",
+                name: "Building a strong Dao",
+              },
+              {
+                id: "7",
+                name: "Online store access for holders to purchase IRL items. Discount % for holders with x amount of Puffsterz NFTs TBD.",
+              },
+            ]}
           />
           <RoadmapItem
-            title="Early Access"
+            title="Branding"
             addToRef={addToRefs}
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            items={[
+              {
+                id: "1",
+                name: "Building IRL & website store perks for holders",
+              },
+              { id: "2", name: "Puffsterz merch branding" },
+              {
+                id: "3",
+                name: "Early merch access to holders of X amount of Puffsterz NFT TBD",
+              },
+              {
+                id: "4",
+                name: "Early access to 1/1 airdrops to holders of X amount of Pufftserz NFT TBD",
+              },
+              { id: "5", name: "Tokenomics" },
+            ]}
           />
           <RoadmapItem
-            title="New Merch"
+            title="Staking platform released"
             addToRef={addToRefs}
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
-          />
-          <RoadmapItem
-            title="Holders Ranking"
-            addToRef={addToRefs}
-            subtext="Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. At Repellat Placeat, Adipisicing Elit. At Repellat Placeat."
+            items={[
+              { id: "1", name: "Release our project utility token" },
+              {
+                id: "2",
+                name: "Early staking platform access to O.G' s & WL minters",
+              },
+              {
+                id: "3",
+                name: "Release of our staking platform to all holders/investors",
+              },
+              {
+                id: "4",
+                name: "Release of additional utility ( TBA ) + Platform for token use + burning mechanisms",
+              },
+              { id: "5", name: "Art upgrade" },
+              {
+                id: "6",
+                name: "Search for second IRL Smoke Shop",
+              },
+              {
+                id: "7",
+                name: "Release of the RM 2.0 and announcing second collection details",
+              },
+            ]}
           />
         </Items>
       </Container>
