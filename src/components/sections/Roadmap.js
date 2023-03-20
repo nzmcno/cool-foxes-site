@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Section = styled.section`
-  min-height: 250vh;
+  min-height: 300vh;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
@@ -29,7 +29,7 @@ const Title = styled.h1`
 
 const Container = styled.div`
   width: 70%;
-  height: 250vh;
+  height: 300vh;
   background-color: ${(props) => props.theme.body};
   margin: 0 auto;
   display: flex;
