@@ -41,9 +41,9 @@ const Btn = styled.button`
 
 const Button = ({ text, link }) => {
   return (
-    <Btn>
-      <Link to={link}>{text}</Link>
-    </Btn>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <Btn> {text}</Btn>
+    </a>
   );
 };
 //        <a aria-label= target="_blank" rel="noreferrer"></a>
