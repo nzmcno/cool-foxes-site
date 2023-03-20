@@ -148,7 +148,13 @@ const Banner = () => {
         Join the <br /> Puffsterz Corp
       </Title>
       <BtnContainer>
-        <JoiNow>Join Now</JoiNow>
+        <a
+          href="https://discord.gg/bkBngp8FKu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <JoiNow>Join Now</JoiNow>{" "}
+        </a>
       </BtnContainer>
     </Section>
   );
