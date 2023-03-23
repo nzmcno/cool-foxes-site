@@ -110,6 +110,10 @@ const Position = styled.h2`
   font-weight: 400;
 `;
 
+const RoundedImage = styled.img`
+  border-radius: 10px;
+`;
+
 const projectName = "Puffsterz";
 const MemberComponent = ({
   img,
@@ -121,7 +125,7 @@ const MemberComponent = ({
     <Item>
       <a href={twitterlink} target="_blank" rel="noopener noreferrer">
         <ImageContainer>
-          <img src={img} alt={name} />
+          <RoundedImage src={img} alt={name} />
         </ImageContainer>
         <Name>{name}</Name>
         <Position>{position}</Position>
