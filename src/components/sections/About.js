@@ -126,10 +126,11 @@ const ButtonContainer = styled.div`
   align-self: flex-start;
 
   @media (max-width: 64em) {
-    width: 100%;
-    button {
-      margin: 0 auto;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
   }
 `;
 

@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Section = styled.section`
-  min-height: 300vh;
+  height: auto;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
@@ -29,7 +29,7 @@ const Title = styled.h1`
 
 const Container = styled.div`
   width: 70%;
-  height: 300vh;
+  height: auto;
   background-color: ${(props) => props.theme.body};
   margin: 0 auto;
   display: flex;
@@ -104,6 +104,7 @@ const Item = styled.li`
   width: 100%;
   height: 100%;
   display: flex;
+  margin-bottom: 2rem; // Add margin-bottom to create space between items
 
   @media (max-width: 48em) {
     justify-content: flex-end !important;
@@ -127,7 +128,14 @@ const Box = styled.p`
   padding: 1rem;
   position: relative;
   border: 1px solid ${(props) => props.theme.text};
+
+  @media (max-width: 40em) {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid ${(props) => props.theme.text};
+  }
 `;
+
 const SubTitle = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontxl};
@@ -181,12 +189,6 @@ const Roadmap = () => {
   revealRefs.current = [];
   gsap.registerPlugin(ScrollTrigger);
 
-  const addToRefs = (el) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el);
-    }
-  };
-
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
     revealRefs.current.forEach((el, index) => {
@@ -222,7 +224,6 @@ const Roadmap = () => {
           <Item>&nbsp;</Item>
           <RoadmapItem
             title="Building"
-            addToRef={addToRefs}
             items={[
               { id: "1", name: "Launch of Discord, twitter & website" },
               { id: "2", name: "Delivery of artwork" },
@@ -247,7 +248,6 @@ const Roadmap = () => {
 
           <RoadmapItem
             title="Holder payouts and Giveaways"
-            addToRef={addToRefs}
             items={[
               {
                 id: "1",
@@ -278,7 +278,6 @@ const Roadmap = () => {
           />
           <RoadmapItem
             title="Branding"
-            addToRef={addToRefs}
             items={[
               {
                 id: "1",
@@ -298,7 +297,6 @@ const Roadmap = () => {
           />
           <RoadmapItem
             title="Staking platform released"
-            addToRef={addToRefs}
             items={[
               { id: "1", name: "Release our project utility token" },
               {
