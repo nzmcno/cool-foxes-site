@@ -15,9 +15,6 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import React, { useState, useEffect } from "react";
 
-import boostMusic from "./assets/boostMusic.mp3";
-import useSound from "use-sound";
-
 function App() {
   return (
     <>

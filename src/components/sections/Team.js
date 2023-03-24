@@ -10,6 +10,9 @@ import img6 from "../../assets/Nfts/team/member-6.png";
 import img7 from "../../assets/Nfts/team/member-7.jpeg";
 import img8 from "../../assets/Nfts/team/member-8.png";
 import img9 from "../../assets/Nfts/team/member-9.jpeg";
+import sevleg from "../../assets/Nfts/team/member10.jpg";
+import mbe from "../../assets/Nfts/team/mbe.png";
+
 import ConfettiComponent from "../Confetti";
 
 const Section = styled.section`
@@ -193,6 +196,24 @@ const Team = () => {
           name="DegenTSF"
           position="CTO"
           twitterlink="https://twitter.com/DeGenTSF"
+        />
+        <MemberComponent
+          img={mbe}
+          name="mbeNFT"
+          position="Marketing Advisor"
+          twitterlink="https://twitter.com/mbeNFT"
+        />
+        <MemberComponent
+          img={sevleg}
+          name="SeventhLegend"
+          position="Developer"
+          twitterlink="https://twitter.com/ncnDev"
+        />
+        <MemberComponent
+          img="https://pbs.twimg.com/profile_images/1615090604706340865/vWXTGuuU_400x400.jpg"
+          name="daki3"
+          position="Marketing Advisor"
+          twitterlink="https://twitter.com/NftDaki"
         />
       </Container>
     </Section>
