@@ -12,7 +12,7 @@ const openInNewTab = (url) => {
 };
 
 const Section = styled.section`
-  min-height: 100vh;
+  height: auto;
   width: 100vw;
   background-color: ${(props) => props.theme.body};
   position: relative;
@@ -97,6 +97,7 @@ const Bottom = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
   align-items: center;
   a {
     text-decoration: underline;
@@ -106,7 +107,7 @@ const Bottom = styled.div`
     width: 100%;
 
     span {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 `;
