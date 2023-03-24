@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import wave from "../assets/wave.png";
 import music from "../assets/music.png";
-import boostMusic from "./playlist";
+import playlist from "./playlist2";
 
 import useSound from "use-sound";
 
@@ -37,16 +37,20 @@ const MusicLogo = styled.img`
 const WaveLogo = styled.img`
   width: 50%;
 `;
-
 const MusicButton = () => {
   const [isActive, setIsActive] = useState(true);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
 
-  const [play, { stop }] = useSound(boostMusic, {
+  const [play, { stop }] = useSound(playlist[currentSongIndex], {
     interrupt: true,
+    onend: () => {
+      // switch to the next song when current song ends
+      setCurrentSongIndex((currentSongIndex + 1) % playlist.length);
+    },
   });
 
   useEffect(() => {
@@ -55,7 +59,7 @@ const MusicButton = () => {
     } else {
       stop();
     }
-  }, [isActive, play]);
+  }, [isActive, play, stop]);
 
   return (
     <StyledMusicButton onClick={handleClick}>
