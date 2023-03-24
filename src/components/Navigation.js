@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
+import MusicButton from "./MusicButton";
 
 const Section = styled.section`
   width: 100vw;
@@ -137,7 +138,11 @@ const openInNewTab = (url) => {
 
 const Navigation = () => {
   const [click, setClick] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
   const scrollTo = (id) => {
     let element = document.getElementById(id);
 
@@ -167,16 +172,8 @@ const Navigation = () => {
           </MenuItem>
           <MenuItem onClick={() => scrollTo("team")}>Team</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
-
-          <MenuItem>
-            <div className="mobile">
-              <Button text="Join Now" link="https://discord.gg/bkBngp8FKu" />
-            </div>
-          </MenuItem>
         </Menu>
-        <div className="desktop">
-          <Button text="Join Now" link="https://discord.gg/bkBngp8FKu" />
-        </div>
+        <MusicButton isActive={isActive} onClick={handleClick} />
       </NavBar>
     </Section>
   );
