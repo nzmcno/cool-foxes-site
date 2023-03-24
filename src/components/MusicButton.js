@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import wave from "../assets/wave.png";
 import music from "../assets/music.png";
-import boostMusic from "../assets/boostMusic.mp3";
+import boostMusic from "./playlist";
+
 import useSound from "use-sound";
 
 const StyledMusicButton = styled.button`
