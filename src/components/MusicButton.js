@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import wave from "../assets/wave.png";
 import music from "../assets/music.png";
+import boostMusic from "../assets/boostMusic.mp3";
+import useSound from "use-sound";
 
 const StyledMusicButton = styled.button`
   background-color: #fff;
@@ -37,11 +38,23 @@ const WaveLogo = styled.img`
 `;
 
 const MusicButton = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
+
+  const [play, { stop }] = useSound(boostMusic, {
+    interrupt: true,
+  });
+
+  useEffect(() => {
+    if (isActive) {
+      play();
+    } else {
+      stop();
+    }
+  }, [isActive, play]);
 
   return (
     <StyledMusicButton onClick={handleClick}>

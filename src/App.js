@@ -19,16 +19,6 @@ import boostMusic from "./assets/boostMusic.mp3";
 import useSound from "use-sound";
 
 function App() {
-  const [play] = useSound(boostMusic, {
-    // `interrupt` ensures that if the sound starts again before it's
-    // ended, it will truncate it. Otherwise, the sound can overlap.
-    interrupt: true,
-  });
-
-  useEffect(() => {
-    play();
-  });
-
   return (
     <>
       <GlobalStyles />
